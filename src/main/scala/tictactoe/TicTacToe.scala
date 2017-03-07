@@ -1,3 +1,10 @@
+package tictactoe
+
+import scala.io.StdIn.readLine
+import scala.util.{ Try, Success, Failure }
+
+import Game._
+
 object TicTacToe extends App {
   def continue(board: Board, tokens: (Char, Char)): Unit = {
     val (curToken, nextToken) = tokens
@@ -19,7 +26,6 @@ object TicTacToe extends App {
     }
   }
 
-  val emptyBoard = Vector.fill(9)(None)
   val (p1Token, p2Token) = ('O', 'X')
 
   println(stringify(emptyBoard))

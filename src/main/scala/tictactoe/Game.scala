@@ -1,10 +1,7 @@
 package tictactoe
 
-import scala.io.StdIn.readLine
-import scala.util.{ Try, Success, Failure }
-
 object Game {
-  type Board = Vector[Option[Char]]
+  val emptyBoard = Vector.fill(9)(None)
 
   def stringify(board: Board) =
     "   0   1   2\n" ++
